@@ -30,8 +30,7 @@ def won?(board)
   def full?(board)
     board.select do |position|
       return true if board.all? {|position_taken| position_taken == "X" && position_taken == "O"}
-    else
-      return false
     end
+      return false
     end
 end
