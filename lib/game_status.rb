@@ -21,7 +21,7 @@ def won?(board)
     # return winning index array if any of the winning positions on our board are all filled with "X"
     return win_combination if win_combination.all? {|position| board[position] == "X"}
     # here we are checking for possible winning situations for "O" and returning the winning array
-    return win_combination if win_combination.all? {|positions| board[position] == "O"}
+    return win_combination if win_combination.all? {|position| board[position] == "O"}
   end
     return false if board.all? {|position| position != " "}
     return false if board.all? {|position| position == " "}
