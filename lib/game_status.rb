@@ -30,3 +30,9 @@ def won?(board)
   def full?(board)
     return true if board.none? {|position_taken| position_taken == " "}
 end
+
+def draw?(board)
+  return true if !won? && full
+  return false if !won? && !full
+  return false if won?
+end
