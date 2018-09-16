@@ -30,7 +30,7 @@ def won?(board)
   def full?(board)
     position_taken = true
     board.each do |position|
-      if position == "X" && position == "O"
+      if board[position] == "X" && board[position] == "O"
         position_taken = true
       else
         position_taken = false
