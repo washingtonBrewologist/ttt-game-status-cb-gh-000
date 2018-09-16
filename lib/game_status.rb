@@ -26,4 +26,3 @@ def won?(board)
     return false if board.all? {|position| position != " "}
     return false if board.all? {|position| position == " "}
   end
-      
