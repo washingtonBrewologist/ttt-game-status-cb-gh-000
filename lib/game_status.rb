@@ -32,5 +32,4 @@ def won?(board)
       return true if board.all? {|position_taken| position_taken == "X" && position_taken == "O"}
       end
       return false
-  end
 end
