@@ -28,10 +28,11 @@ def won?(board)
   end
 
   def full?(board)
-    board.all? do |position|
+    position_taken = true
+    board.each do |position|
       if position == "X" && position == "O"
-        return true
-      elsif position != "X" && position != "O"
-  return false
-end
-end
+        position_taken = true
+      else
+        position_taken = false
+      end
+    end
