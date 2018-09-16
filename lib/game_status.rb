@@ -23,6 +23,15 @@ def won?(board)
     # here we are checking for possible winning situations for "O" and returning the winning array
     return win_combination if win_combination.all? {|position| board[position] == "O"}
   end
-    return false if board.all? {|position| position != " "}
-    return false if board.all? {|position| position == " "}
+    return false if board.all? {|position| position != " "} # false for draw
+    return false if board.all? {|position| position == " "} # false for empty board
+  end
+
+  def full?(board)
+    board.select do |position|
+      if position == "X" && position == "O"
+        return true
+      else
+        return false
+
   end
