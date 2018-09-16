@@ -29,7 +29,8 @@ def won?(board)
 
   def full?(board)
     board.all? do |position|
-    return true if position == "X" && position == "O"
-    end
-    return false
+      board[position].detect{|position| position == "X" && position == "O"}
+      return true
   end
+  return false
+end
